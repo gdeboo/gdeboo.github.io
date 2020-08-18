@@ -1,0 +1,7 @@
+table.partslist {
+	border: 1px solid black;
+}
+
+table.partslist td {
+ 	vertical-align: top;
+}
