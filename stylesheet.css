@@ -1,7 +1,11 @@
 table.partslist {
 	border: 1px solid black;
+	font-family: "Courier New";
 }
 
 table.partslist td {
  	vertical-align: top;
+}
+table.partslist th {
+ 	text-align: left;
 }
