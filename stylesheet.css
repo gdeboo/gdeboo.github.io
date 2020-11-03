@@ -9,3 +9,16 @@ table.partslist td {
 table.partslist th {
  	text-align: left;
 }
+
+table.RFdetectors {
+	border-collapse: collapse;
+	width: 1400px;
+}
+
+table.RFdetectors th, td {
+	border: 1px solid black;
+}
+
+table.RFdetectors td {
+	text-align: center;
+}
