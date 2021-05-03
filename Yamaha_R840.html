@@ -1,0 +1,112 @@
+<html>
+<head>
+		<title>Yamaha R-840 amplifier</title>
+		<link rel="stylesheet" href="stylesheet.css">
+</head>
+
+<header>
+<a href="index.html">Home</a><br>
+<h1>Yamaha R-840 amplifier</h1>
+</header>
+
+<div class="flex-container">
+	<div>
+<h2>Specifications</h2>
+<table class="specifications">
+	<tr class="section">
+		<td colspan=3>AMPLIFIER SECTION</td>
+	</tr>
+	<tr><td>Minimum RMS output power per channel</td><td>(6 &#8486, 1 kHz, 10 % THD)</td><td>65 W + 65 W</td></tr>
+	<tr>
+		<td>Input sensitivity/Impedance</td><td>PLAYER, etc.</td><td>200 mV/47 k&#8486</td>
+	</tr>
+	<tr>
+		<td>Frequency Response</td><td>PLAYER, etc.</td><td> 20 Hz to 20 Khz &plusmn 0.5 dB</td>
+	</tr>
+	<tr>
+		<td>Total Harmonic Distortion</td><td>PLAYER, etc. (30 W/6 &#8486)</td><td>0.04 % or less</td>
+	</tr>
+	<tr>
+		<td>Signal to Noise ratio (IHF-A network)</td><td>PLAYER (200 mV, Input shorted</td><td> 100 dB or more</td>
+	</tr>
+	<tr class="section">
+		<td colspan=3>TUNER SECTION</td>
+	</tr>
+	<tr>
+		<td colspan=2>Tuning Range</td><td>87.50 to 108.00 MHz</td>
+	</tr>
+	<tr class="section">
+		<td colspan=3>GENERAL</td>
+	</tr>
+	<tr>
+		<td colspan=2>Power supply</td><td>AC 230V, 50 Hz</td>
+	</tr>
+	<tr>
+		<td colspan=2>Power consumption</td><td>115 W</td>
+	</tr>
+	<tr>
+		<td colspan=2>Dimensions (W &times H &times D)</td><td>215 &times 110 &times 348 mm</td>
+	</tr>
+	<tr>
+		<td colspan=2>Weight</td><td>5.7 kg</td>
+	</tr>
+	<tr>
+		<td colspan=2>Standby power consumption</td><td>less than 0.3 W</td>
+	</tr>
+</table>
+
+<h2>Parts list</h2>
+
+<table class="partslist">
+<tr>
+	<th width=200>Reference designators</th><th>Part description</th><th>ORIG-MFG-PART-NO</th><th>QTY/PT</th><th>location</th><th>Circuit function</th>
+</tr>
+<tr>
+	<td>D505,D506,D507,D508</td><td>DIODE</td><td>HSS104,1SS133,176</td>
+</tr>
+<tr>
+	<td>R544-545</td><td>1 W RESISTOR</td><td>1.8k</td>
+</tr>
+<tr>
+	<td>R546-547</td><td>1 W RESISTOR</td><td>33k</td>
+</tr>
+<tr>
+	<td>R552-553</td><td>SMD RESISTOR</td><td>68k</td><td>2</td><td>Rear of the main PCB</td><td>Bias current of Q516,Q517</td>
+</tr>
+<tr>
+	<td>R558-559</td><td>0.5 W RESISTOR</td><td>820</td>
+</tr>
+<tr>
+	<td>R560</td><td>0.5 W RESISTOR</td><td>330</td>
+</tr>
+<tr>
+	<td>R561</td><td>0.5 W RESISTOR</td><td>2.7k</td>
+</tr>
+<tr>
+	<td>R562-563</td><td>0.5 W RESISTOR</td><td>1k</td>
+</tr>
+<tr>
+	<td>Q513-514</td><td>NPN silicon transistor</td><td>2SD2705S</td>
+</tr>
+<tr>
+	<td>Q516-517</td><td>NPN transistor</td><td>2SC2229</td><td>2</td>
+</tr>
+<tr>
+	<td>Q518</td><td>BJT transistor PNP</td><td>2SA1145</td>
+</tr>
+<tr>
+	<td>Q519</td><td>NPN transistor</td><td>2SC4614</td>
+</tr>
+<tr>
+	<td>Q520-521</td><td>PNP transistor</td><td>2SA1770</td><td>2</td>
+</tr>
+
+</table>
+
+<h2>Distortion issue</h2>
+<p>Both channels had enormous distortion on both the left and the right speaker outputs. Using an oscilloscope, I found that the output voltage did not go negative for either channel. The origin of this problem was that both R552 and R553 were open circuit. These resistors control the bias current of Q516 (left channel channel) and Q517 (right channel). Because these resistors were open circuit, Q516 and Q517 could not pull the voltage at the base of Q520 and Q521 down to -1 V. Instead they were sitting at +1 V. R552 and R553 are 68 k&#8486 SMD resistors that are located on the underside of the main circuit board. To get access to them the whole circuit board needs to be removed. After replacing these resistors the amplifier operated correctly.</p>
+	</div>
+
+</div>
+
+</html>
