@@ -108,7 +108,7 @@
 
 <h2>Distortion issue</h2>
 <p>Both channels had enormous distortion on both the left and the right speaker outputs. Using an oscilloscope, I found that the output voltage did not go negative for either channel. The origin of this problem was that both R552 and R553 were open circuit. These resistors control the bias current of Q516 (left channel) and Q517 (right channel). Because these resistors were open circuit, Q516 and Q517 could not pull the voltage at the base of Q520 and Q521 down to -1 V. Instead they were sitting at +1 V. R552 and R553 are 68 k&#8486 SMD resistors that are located on the underside of the main circuit board. To get access to them the whole circuit board needs to be removed. After replacing these resistors the amplifier operated correctly.</p>
-<p>The same problem and solution have been described <a href="https://www.hifi-forum.de/viewthread-220-8212.html">here</a>.</p>
+<p>The same problem and solution have been described <a href="https://www.hifi-forum.de/viewthread-220-8212.html">here</a> and <a href="https://www.circuitsonline.net/forum/view/152088">here</a>.</p>
 	</div>
 
 </div>
