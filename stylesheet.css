@@ -41,6 +41,11 @@ table.specifications tr.section {
 	border-top: 1px solid black;
 }
 
+table.co-authors {
+	width: 800px;
+	border-collapse: collapse;
+}
+
 .flex-container {
 	display: flex;
 	flex-direction: column;
