@@ -65,13 +65,25 @@
 	<td>D505,D506,D507,D508</td><td>DIODE</td><td>HSS104,1SS133,176</td>
 </tr>
 <tr>
+	<td>D511</td><td>DIODE</td><td></td><td></td><td>C3</td>
+</tr>
+<tr>
+	<td>D512</td><td>DIODE</td><td></td><td></td><td>E3</td>
+</tr>
+<tr>
+	<td>D518</td><td>DIODE</td><td></td><td></td><td>C5</td>
+</tr>
+<tr>
+	<td>D519</td><td>DIODE</td><td></td><td></td><td>D5</td>
+</tr>
+<tr>
 	<td>R544-545</td><td>1 W RESISTOR</td><td>1.8k</td>
 </tr>
 <tr>
 	<td>R546-547</td><td>1 W RESISTOR</td><td>33k</td>
 </tr>
 <tr>
-	<td>R552-553</td><td>SMD RESISTOR</td><td>68k</td><td>2</td><td>Underside of the main PCB</td><td>Bias current of Q516,Q517</td>
+	E4)<td>R552-553</td><td>SMD RESISTOR</td><td>68k</td><td>2</td><td>Underside of the main PCB (D3,</td><td>Bias current of Q516,Q517</td>
 </tr>
 <tr>
 	<td>R558-559</td><td>0.5 W RESISTOR</td><td>820</td>
@@ -84,6 +96,9 @@
 </tr>
 <tr>
 	<td>R562-563</td><td>0.5 W RESISTOR</td><td>1k</td>
+</tr>
+<tr>
+	<td>R622,R623</td><td>SMD RESISTOR</td><td>68k</td><td>2</td><td>C5,D4</td><td>Bias current of Q510,Q511</td>
 </tr>
 <tr>
 	<td>Q513-514</td><td>NPN silicon transistor</td><td>2SD2705S</td>
@@ -108,6 +123,7 @@
 
 <h2>Distortion issue</h2>
 <p>Both channels had enormous distortion on both the left and the right speaker outputs. Using an oscilloscope, I found that the output voltage did not go negative for either channel. The origin of this problem was that both R552 and R553 were open circuit. These resistors control the bias current of Q516 (left channel) and Q517 (right channel). Because these resistors were open circuit, Q516 and Q517 could not pull the voltage at the base of Q520 and Q521 down to -1 V. Instead they were sitting at +1 V. R552 and R553 are 68 k&#8486 SMD resistors that are located on the underside of the main circuit board. To get access to them the whole circuit board needs to be removed. After replacing these resistors the amplifier operated correctly.</p>
+<p>The R552 and R553 resistors fail because they dissipate too much heat for the package and its placement. The package is a 0603 imperial size, which has a power rating of 100 mW. The power that the resistors dissipate is about 88 mW which is below their power rating. However, they are placed underneath the circuit board where there is little cooling and they become too hot. Resistors R622 and R623 have the same problem as R552 and R553 and also need to be replaced.</p>
 <p>The same problem and solution have been described <a href="https://www.hifi-forum.de/viewthread-220-8212.html">here</a> and <a href="https://www.circuitsonline.net/forum/view/152088">here</a>.</p>
 	</div>
 
